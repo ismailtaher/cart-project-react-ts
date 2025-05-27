@@ -113,7 +113,7 @@ const useCartContext = (initCartState: CartStateType) => {
   }, []);
 
   // Calculate total items in the cart
-  const totalitems = state.cart.reduce((prev, item) => prev + item.qty, 0);
+  const totalItems = state.cart.reduce((prev, item) => prev + item.qty, 0);
 
   // Calculate total price in USD format
   const totalPrice = new Intl.NumberFormat("en-US", {
@@ -129,7 +129,7 @@ const useCartContext = (initCartState: CartStateType) => {
   });
 
   // Return everything needed for consuming the cart context
-  return { dispatch, REDUCER_ACTIONS, totalitems, totalPrice, cart };
+  return { dispatch, REDUCER_ACTIONS, totalItems, totalPrice, cart };
 };
 
 // Define type based on return value of useCartContext
@@ -139,7 +139,7 @@ export type UseCartContextType = ReturnType<typeof useCartContext>;
 const initCartContextState: UseCartContextType = {
   dispatch: () => {}, // No-op dispatch/void return
   REDUCER_ACTIONS: REDUCER_ACTION_TYPE, // Action types
-  totalitems: 0, // Initial item count
+  totalItems: 0, // Initial item count
   totalPrice: "", // Initial price string
   cart: [], // Initial cart
 };
