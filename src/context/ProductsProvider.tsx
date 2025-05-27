@@ -8,10 +8,11 @@ export type ProductsType = {
   price: number; // Price of the product
 };
 
-// Initial empty state for the products array
-const initState: ProductsType[] = [];
+//Initial empty state for the products array
+// uncomment this if using useEffect with fetch logic
 
-/* 
+/* const initState: ProductsType[] = []; */
+
 // Uncomment this block to use static mock data instead of fetching from the server
 const initState: ProductsType[] = [
   {
@@ -29,8 +30,7 @@ const initState: ProductsType[] = [
     name: "Deluxe Widget",
     price: 29.99,
   },
-]; 
-*/
+];
 
 // Define the context type: an object containing an array of products
 export type UseProductsContextType = { products: ProductsType[] };
@@ -49,7 +49,7 @@ export const ProductsProvider = ({ children }: ChildrenType): ReactElement => {
   // State to store the list of products, initialized with an empty array or mock data
   const [products, setProducts] = useState<ProductsType[]>(initState);
 
-  // useEffect runs once after component mounts to fetch product data
+  /*   // useEffect runs once after component mounts to fetch product data
   useEffect(() => {
     // Async function to fetch product data from the backend
     const fetchProducts = async (): Promise<ProductsType[]> => {
@@ -67,7 +67,7 @@ export const ProductsProvider = ({ children }: ChildrenType): ReactElement => {
 
     // Call the fetch function and update the products state
     fetchProducts().then((products) => setProducts(products));
-  }, []); // Empty dependency array = runs only once on mount
+  }, []); // Empty dependency array = runs only once on mount */
 
   // Provide the products state to all children components using the context
   return (
