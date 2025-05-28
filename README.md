@@ -1,54 +1,69 @@
-# React + TypeScript + Vite
+# 🛒 React Shopping Cart App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple yet powerful shopping cart application built with **React**, **TypeScript**, and **Vite**. This app demonstrates advanced React concepts such as `useReducer`, `Context API`, memoization with `React.memo`, and dynamic rendering of cart and product items.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ✅ Add items to cart
+- ➕ Update item quantity
+- ❌ Remove items from cart
+- 💰 View total items and total price
+- 🧠 Uses `useReducer` for scalable state management
+- ♻️ Optimized rendering with `React.memo` and custom comparison
+- 📦 Modular folder structure
+- ⚡ Built using Vite for fast development
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📸 Demo
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Products
+![Screenshot 2025-05-28 at 4 16 28 PM](https://github.com/user-attachments/assets/786084a9-335d-4d0d-828f-c8f20356f82a)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Cart
+![Screenshot 2025-05-28 at 4 16 47 PM](https://github.com/user-attachments/assets/9d436b00-81e2-42ac-aa11-bc01e578da36)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 🛠️ Technologies Used
+
+- **React** with **TypeScript**
+- **Vite** for bundling and dev server
+- **Context API** for state sharing
+- **useReducer** for cart logic
+- **React.memo** for performance optimization
+
+---
+
+## 🧠 Concepts Covered
+
+- 🧮 `useReducer` for complex state logic
+- 📦 Context API for shared state
+- 💡 Memoization using `React.memo` with custom comparison logic
+- 🖼️ Dynamic image loading using `import.meta.url`
+- 🧼 Clean and semantic HTML with accessibility in mind
+
+---
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/react-cart-app.git
+cd react-cart-app
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
+
