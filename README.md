@@ -1,6 +1,6 @@
 # 🛒 React Shopping Cart App
 
-A simple yet powerful shopping cart application built with **React**, **TypeScript**, and **Vite**. This app demonstrates advanced React concepts such as `useReducer`, `Context API`, memoization with `React.memo`, and dynamic rendering of cart and product items.
+A simple shopping cart application built with **React**, **TypeScript**, and **Vite**. This app demonstrates React concepts such as `useReducer`, `Context API`, memoization with `React.memo`, and dynamic rendering of cart and product items.
 
 ---
 
